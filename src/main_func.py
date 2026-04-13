@@ -1,4 +1,5 @@
 # Stuff for the main. This stuff will be called on main.py
+import tkinter as tk
 
 # Build main pop-up.
 # Text: Welcome to my programming portfolio! Click on any of the buttons to learn about a project I have built and get to run it!
@@ -27,3 +28,8 @@
     # Learned: Filing through a CSV and parsing the retrived information
     # Challenge: Figuring out how to apply multiple filters
     # Button to run. When clicked, show text that says: This is running in the terminal, please head there to use this program
+
+root = tk.Tk()
+# All the stuff
+
+root.mainloop()
