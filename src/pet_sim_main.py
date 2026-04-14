@@ -7,10 +7,10 @@ import random
 # First, welcome the user and have them either load a pet or create a pet
 # Show the user their pet's stats and have them select an action
 
-def main():
+def ps_main():
     # Reading the CSV to get saved information relating to the user and what has happened
     try:
-        with open("P:\DeLong, Lizzie\Personal_Portfolio\docs\pet_sim_user_info.csv", "r") as file:
+        with open("DeLong, Lizzie/Personal_Portfolio/docs/pet_sim_user_info.csv", "r") as file:
             reader = csv.DictReader(file)
             row = next(reader) # read header
             the_time = int(row['hour'])
@@ -136,7 +136,7 @@ def main():
             current_pet = make_pet()
             # write the pet to CSV
             try:
-                with open("P:\DeLong, Lizzie\Personal_Portfolio\docs\pet_data.csv", "a", newline='') as csv_file:
+                with open("DeLong, Lizzie/Personal_Portfolio/docs/pet_data.csv", "a", newline='') as csv_file:
                     fieldnames = ['name','species','age','hunger','happieness','energy']
                     writer = csv.DictWriter(csv_file, fieldnames = fieldnames)
                     writer.writerow({'name': current_pet.name, 'species': current_pet.species, 'age': current_pet.age, 'hunger': current_pet.hunger, 'happieness': current_pet.happieness, 'energy': current_pet.energy})
@@ -146,7 +146,7 @@ def main():
         elif action == "2":
             # check if pets saved in CSV
             try:
-                with open("P:\DeLong, Lizzie\Personal_Portfolio\docs\pet_data.csv", "r") as csv_file:
+                with open("DeLong, Lizzie/Personal_Portfolio/docs/pet_data.csv", "r") as csv_file:
                     content = csv.reader(csv_file)
                     headers = next(content)
                     # If no error is thrown, save the pets in a list to be printed for the user
@@ -168,7 +168,7 @@ def main():
                     load_species = input("Enter the species of the pet you would like to load:\n").strip().title()
                     # Info obtained, now find that pet in the csv and save that information. We can then take the CSV info and pass it into PetCreator and set that as current pet
                     try:
-                        with open("P:\DeLong, Lizzie\Personal_Portfolio\docs\pet_data.csv", "r", newline='') as the_file:
+                        with open("DeLong, Lizzie/Personal_Portfolio/docs/pet_data.csv", "r", newline='') as the_file:
                             the_content = csv.reader(the_file)
                             the_headers = next(the_content)
                             for line in the_content:

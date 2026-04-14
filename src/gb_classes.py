@@ -73,7 +73,7 @@ class GradeBook:
         self.students = students
         # Open a written CSV and save each student in the students list. At the end of program, this list will be WRITTEN to be saved
         try:
-            with open('P:\DeLong, Lizzie\Personal_Portfolio\docs\grade_book.csv', 'r') as file:
+            with open('DeLong, Lizzie/Personal_Portfolio/docs/grade_book.csv', 'r') as file:
                 content = csv.reader(file)
                 headers = next(content)
                 for line in content:
@@ -109,7 +109,7 @@ class GradeBook:
     def save_students(self):
         # take the students list, write the headers, and write each list item
         try:
-            with open("P:\DeLong, Lizzie\Personal_Portfolio\docs\grade_book.csv", "w") as file:
+            with open("DeLong, Lizzie/Personal_Portfolio/docs/grade_book.csv", "w") as file:
                 fieldnames = ['name','id','all_grades']
                 writer = csv.DictWriter(file, fieldnames=fieldnames)
                 writer.writeheader()

@@ -17,7 +17,7 @@ from all_helpers import *
 # EXTRA CREDIT
 # Add an option to change the background color (1 point)
 
-def main():
+def fp_main():
     
     start_point = [[-500, -400], [0, 500], [500, -400]]
     # Greet user
@@ -63,5 +63,3 @@ def main():
     recursive_draw(my_turtle, depth, start_point)
     turtle.done()
     # Now figure out how the user can save it as an image
-
-main()

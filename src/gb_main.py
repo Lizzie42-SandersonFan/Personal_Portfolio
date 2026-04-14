@@ -4,7 +4,7 @@ from all_helpers import *
 import time
 
 # Main menu: Add student, Add grade to student, View Student (name, ID, ALL grades, average, letter), View ALL students (Name, ID, Average, letter for EACH), Class summary (name and letter grade for all), Exit
-def main():
+def gb_main():
     gradebook = GradeBook()
     while True:
         clear_screen()
@@ -44,4 +44,3 @@ def main():
     return
 
 # See Actions file for more code
-main()

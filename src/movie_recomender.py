@@ -37,7 +37,7 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 # Main function. Displays menu. Options are: Search, Print EVERYTHING, Exit. Has inner functions
-def main():
+def mv_main():
     movies_found = []
 
     # Filter funtion for Genre. This will ask for a genre like "romance" or sm and grab everything that has the genre "Romance" IN IT
@@ -47,7 +47,7 @@ def main():
         genre = input("What is the genre you are looking for (ex: 'Science Fiction,' 'Romance,' 'Drama')\n").strip().lower()
         if not movies_found:
             try:
-                with open("P:\DeLong, Lizzie\Personal_Portfolio\docs\Movies_list.csv", "r") as csv_file:
+                with open("DeLong, Lizzie/Personal_Portfolio/docs/Movies_list.csv", "r") as csv_file:
                     content = csv.reader(csv_file)
                     headers = next(content)
                     for line in content:
@@ -70,7 +70,7 @@ def main():
         if not movies_found:
             # any previous filters have not given me an already narrowed down list
             try:
-                with open("P:\DeLong, Lizzie\Personal_Portfolio\docs\Movies_list.csv", "r") as csv_file:
+                with open("DeLong, Lizzie/Personal_Portfolio/docs/Movies_list.csv", "r") as csv_file:
                     content = csv.reader(csv_file)
                     headers = next(content)
                     for line in content:
@@ -92,7 +92,7 @@ def main():
         actor = input("What is the name of the actor you wish to filter for (ex: 'Chris,' 'Ryan')\n").strip().lower()
         if not movies_found:
             try:
-                with open("P:\DeLong, Lizzie\Personal_Portfolio\docs\Movies_list.csv", "r") as csv_file:
+                with open("DeLong, Lizzie/Personal_Portfolio/docs/Movies_list.csv", "r") as csv_file:
                     content = csv.reader(csv_file)
                     headers = next(content)
                     for line in content:
@@ -133,7 +133,7 @@ def main():
                 continue
         if not movies_found:
             try:
-                with open("P:\DeLong, Lizzie\Personal_Portfolio\docs\Movies_list.csv", "r") as csv_file:
+                with open("DeLong, Lizzie/Personal_Portfolio/docs/Movies_list.csv", "r") as csv_file:
                     content = csv.reader(csv_file)
                     headers = next(content)
                     for line in content:
@@ -176,7 +176,7 @@ def main():
         if action == "2":
             # viewing the entire stupid file
             try:
-                with open("P:\DeLong, Lizzie\Personal_Portfolio\docs\Movies_list.csv", "r") as csv_file:
+                with open("DeLong, Lizzie/Personal_Portfolio/docs/Movies_list.csv", "r") as csv_file:
                     content = csv.reader(csv_file)
                     headers = next(content)
                     num = 1
